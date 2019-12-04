@@ -1,6 +1,17 @@
 const path = require("path");
 const mix = require("laravel-mix");
 
+/*
+ |--------------------------------------------------------------------------
+ | Mix Asset Management
+ |--------------------------------------------------------------------------
+ |
+ | Mix provides a clean, fluent API for defining some Webpack build steps
+ | for your Laravel application. By default, we are compiling the Sass
+ | file for the application as well as bundling up all the JS files.
+ |
+ */
+
 mix.options({
     postCss: [require("autoprefixer")],
     hmrOptions: {
@@ -21,17 +32,6 @@ mix.options({
         contentBase: path.resolve(__dirname, "public")
     }
 });
-
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
 
 // client
 mix.js("resources/js/app-client.js", "public/js");
@@ -67,17 +67,6 @@ mix.options({
         contentBase: path.resolve(__dirname, "public")
     }
 });
-
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
 
 // client
 mix.js("resources/js/app-client.js", "public/js");
